@@ -3,11 +3,6 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "bucket_seguro" {
-  #checkov:skip=CKV_AWS_18: "Bucket logging no requerido en lab"
-  #checkov:skip=CKV_AWS_144: "Replicacion no requerida en lab"
-  #checkov:skip=CKV_AWS_145: "KMS no requerido en lab"
-  #checkov:skip=CKV_AWS_21: "Versionado no requerido en lab"
-  #checkov:skip=CKV2_AWS_6: "Public access block definido en recurso separado"
   bucket = "mi-bucket-devsecops-demo-12345"
 }
 
@@ -20,7 +15,6 @@ resource "aws_s3_bucket_public_access_block" "publico" {
 }
 
 resource "aws_security_group" "sg_seguro" {
-  #checkov:skip=CKV_AWS_260: "Ingreso SSH restringido a segmento de red"
   name        = "sg_ssh_restringido"
   description = "Grupo de seguridad restringido para lab"
 

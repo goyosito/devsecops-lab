@@ -3,6 +3,9 @@ import sqlite3
 
 app = Flask(__name__)
 
+#Prueba de validación local
+API_KEY = "AKIAIOSFODNN7EXAMPLE"
+
 # FALLA 1: Credencial o Token Hardcodeado (Secret Scanning)
 AWS_SECRET_KEY_SIMULATED = "AKIAIOSFODNN7EXAMPLE_SECRET_KEY"
 
